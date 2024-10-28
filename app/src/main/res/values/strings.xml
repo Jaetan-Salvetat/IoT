@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Bop IoT</string>
+    <string name="welcome_description">
+"Bienvenue sur Bop IoT !
+
+Cette application est l’interface dédiée à l’utilisation de notre module de jeu interactif Bop IoT.
+
+Pour commencer, scannez le QR Code situé à l’arrière de votre module de jeu afin de le connecter à l’application et accéder aux différentes fonctionnalités."
+    </string>
+    <string name="scan_qrcode">Scanner un QRCode</string>
 </resources>

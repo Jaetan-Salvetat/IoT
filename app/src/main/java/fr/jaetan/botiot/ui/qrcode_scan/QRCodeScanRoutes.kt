@@ -6,8 +6,6 @@ import androidx.navigation.navigation
 import fr.jaetan.botiot.helper.NavigationRoutes
 
 fun NavGraphBuilder.qrcodeScanRoutes() {
-    navigation(route = NavigationRoutes.QRCodeScan.name, startDestination = NavigationRoutes.QRCodeScan.name) {
-        composable(NavigationRoutes.QRCodeScan.name) {
-        }
+    composable(NavigationRoutes.qrCodeScan) {
     }
 }

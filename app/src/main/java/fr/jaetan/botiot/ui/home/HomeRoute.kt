@@ -7,9 +7,6 @@ import androidx.navigation.navigation
 import fr.jaetan.botiot.helper.NavigationRoutes
 
 fun NavGraphBuilder.homeRoutes() {
-    navigation(route = NavigationRoutes.Home.name, startDestination = NavigationRoutes.Home.name) {
-        composable(NavigationRoutes.Home.name) {
-
-        }
+    composable(NavigationRoutes.home) {
     }
 }

@@ -11,11 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BotIOT"
-        tools:targetApi="31">
+        tools:targetApi="34"
+        android:enableOnBackInvokedCallback="true">
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.BotIOT">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

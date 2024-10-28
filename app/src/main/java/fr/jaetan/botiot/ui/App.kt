@@ -12,7 +12,7 @@ import fr.jaetan.botiot.ui.qrcode_scan.qrcodeScanRoutes
 fun App() {
     val navController = rememberNavController()
 
-    NavHost(navController, startDestination = NavigationRoutes.Home) {
+    NavHost(navController, startDestination = NavigationRoutes.Onboarding.name) {
         homeRoutes()
         onboardingRoutes()
         qrcodeScanRoutes()
