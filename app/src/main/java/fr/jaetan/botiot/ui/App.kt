@@ -6,15 +6,15 @@ import androidx.navigation.compose.rememberNavController
 import fr.jaetan.botiot.helper.NavigationRoutes
 import fr.jaetan.botiot.ui.home.homeRoutes
 import fr.jaetan.botiot.ui.onboarding.onboardingRoutes
-import fr.jaetan.botiot.ui.qrcode_scan.qrcodeScanRoutes
+import fr.jaetan.botiot.ui.pairing.pairingRoutes
 
 @Composable
 fun App() {
     val navController = rememberNavController()
 
-    NavHost(navController, startDestination = NavigationRoutes.Onboarding.name) {
+    NavHost(navController, startDestination = NavigationRoutes.welcome) {
         homeRoutes()
-        onboardingRoutes()
-        qrcodeScanRoutes()
+        onboardingRoutes(navController)
+        pairingRoutes(navController)
     }
 }

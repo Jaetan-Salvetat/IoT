@@ -1,26 +1,25 @@
-package fr.jaetan.botiot.ui.onboarding.welcome
+package fr.jaetan.botiot.ui.pairing.step2
 
-import android.util.Log
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import   androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import fr.jaetan.botiot.ui._shared.components.AppScaffold
 import fr.jaetan.botiot.R
 import fr.jaetan.botiot.helper.NavigationRoutes
+import fr.jaetan.botiot.ui._shared.components.AppScaffold
 import fr.jaetan.botiot.ui._shared.components.FilledButton
 
 @Composable
-fun WelcomeView(navController: NavHostController) {
+fun PairingStep2View(navController: NavHostController) {
     AppScaffold {
         Column(
             verticalArrangement = Arrangement.SpaceBetween,
@@ -39,7 +38,7 @@ fun WelcomeView(navController: NavHostController) {
 @Composable
 private fun Description(modifier: Modifier) {
     Text(
-        text = stringResource(R.string.welcome_description),
+        text = "Click sur le liens, et connecte le module de jeux à un wifi.",
         textAlign = TextAlign.Center,
         style = MaterialTheme.typography.titleLarge,
         modifier = modifier
@@ -48,10 +47,12 @@ private fun Description(modifier: Modifier) {
 
 @Composable
 private fun ContinueButton(modifier: Modifier, navController: NavHostController) {
+    val localUriHandler = LocalUriHandler.current
     FilledButton(
-        title = R.string.scan_qrcode,
+        title = R.string.next,
         modifier = modifier
     ) {
-        navController.navigate(NavigationRoutes.pairingStep1)
+        // navController.navigate(NavigationRoutes.pairingStep3)
+        localUriHandler.openUri("http://192.168.4.1")
     }
 }

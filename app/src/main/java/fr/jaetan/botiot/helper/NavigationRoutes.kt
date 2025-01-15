@@ -2,10 +2,8 @@ package fr.jaetan.botiot.helper
 
 object NavigationRoutes {
     const val home = "home"
-    const val qrCodeScan = "qrcode_scan"
-
-    object Onboarding {
-        const val name = "onboarding"
-        const val welcome = "onboarding/welcome"
-    }
+    const val welcome = "onboarding/welcome"
+    const val pairingStep1 = "pairing/step1"
+    const val pairingStep2 = "pairing/step2"
+    const val pairingStep3 = "pairing/step3"
 }

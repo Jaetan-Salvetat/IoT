@@ -8,4 +8,5 @@ Cette application est l’interface dédiée à l’utilisation de notre module 
 Pour commencer, scannez le QR Code situé à l’arrière de votre module de jeu afin de le connecter à l’application et accéder aux différentes fonctionnalités."
     </string>
     <string name="scan_qrcode">Scanner un QRCode</string>
+    <string name="next">Continuer</string>
 </resources>
