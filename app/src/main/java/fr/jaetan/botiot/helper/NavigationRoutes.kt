@@ -6,4 +6,6 @@ object NavigationRoutes {
     const val pairingStep1 = "pairing/step1"
     const val pairingStep2 = "pairing/step2"
     const val pairingStep3 = "pairing/step3"
+    const val game = "game"
+    const val stats = "stats"
 }

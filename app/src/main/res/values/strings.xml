@@ -9,4 +9,15 @@ Pour commencer, scannez le QR Code situé à l’arrière de votre module de jeu
     </string>
     <string name="scan_qrcode">Scanner un QRCode</string>
     <string name="next">Continuer</string>
+    <string name="easy_uppercase">FACILE</string>
+    <string name="medium_uppercase">MEDIUM</string>
+    <string name="hard_uppercase">DIFFICILE</string>
+    <string name="easy_subtitle">3 échecs max - 5 sec</string>
+    <string name="medium_subtitle">2 échecs max - 3 sec</string>
+    <string name="hard_subtitle">1 échec max - 2 sec</string>
+    <string name="error">Erreur</string>
+    <string name="error_as_occured">Une erreur est survenue.</string>
+    <string name="back">Retour</string>
+    <string name="results">Résultats:</string>
+    <string name="back_to_home">Retour à l\'accueil</string>
 </resources>

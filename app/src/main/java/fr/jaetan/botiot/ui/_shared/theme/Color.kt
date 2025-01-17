@@ -12,3 +12,6 @@ val Pink40 = Color(0xFF7D5260)
 
 val SurfacePrimary = Color(0xFF65558F)
 val TextSecondary = Color(0xFF8C8697)
+val Green = Color(0xFF1FA456)
+val Orange = Color(0xFFC18009)
+val Red = Color(0xFFFF4C4C)
