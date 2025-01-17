@@ -9,8 +9,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarColors
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -21,6 +19,7 @@ import fr.jaetan.botiot.R
 
 @Composable
 fun AppScaffold(
+    trailingIcon: @Composable () -> Unit = {},
     content: @Composable (PaddingValues) -> Unit
 ) {
     Scaffold { innerPadding ->
@@ -36,7 +35,7 @@ fun AppScaffold(
                     )
                 )
         ) {
-            TopBar()
+            TopBar(trailingIcon)
             content(innerPadding)
         }
     }
@@ -44,7 +43,7 @@ fun AppScaffold(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun TopBar() {
+private fun TopBar(trailingIcon: @Composable () -> Unit) {
     CenterAlignedTopAppBar(
         title = {
             Text(
@@ -52,6 +51,7 @@ private fun TopBar() {
                 style = MaterialTheme.typography.headlineLarge
             )
         },
+        actions = { trailingIcon() },
         colors = TopAppBarDefaults.topAppBarColors(
             containerColor = Color.Transparent
         )

@@ -9,7 +9,11 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
@@ -24,7 +28,15 @@ import fr.jaetan.botiot.ui._shared.components.AppScaffold
 
 @Composable
 fun PairingStep1View(navController: NavHostController, viewModel: PairingStep1ViewModel = viewModel()) {
-    AppScaffold {
+    AppScaffold(
+        trailingIcon = {
+            IconButton(
+                onClick = { viewModel.scanWifiNetworks() },
+            ) {
+                Icon(Icons.Default.Refresh, contentDescription = null)
+            }
+        }
+    ) {
         Content(viewModel, navController)
     }
 }
@@ -60,7 +72,7 @@ private fun Content(viewModel: PairingStep1ViewModel, navController: NavHostCont
         }
 
         OutlinedButton(
-            enabled = !viewModel.isScanning,
+            enabled = !viewModel.isScanning || !viewModel.isTryingToConnect,
             onClick = { viewModel.scanWifiNetworks() },
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)

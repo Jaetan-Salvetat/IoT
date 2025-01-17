@@ -13,7 +13,7 @@ import fr.jaetan.botiot.ui.pairing.pairingRoutes
 fun App() {
     val navController = rememberNavController()
 
-    NavHost(navController, startDestination = NavigationRoutes.home) {
+    NavHost(navController, startDestination = NavigationRoutes.welcome) {
         homeRoutes(navController)
         onboardingRoutes(navController)
         pairingRoutes(navController)
